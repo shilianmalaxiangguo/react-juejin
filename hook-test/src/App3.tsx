@@ -24,13 +24,21 @@ function reducer(state: Data, action: Action): Data {
 
 function App() {
 
-    const [state, dispatch] = useReducer<Reducer<Data, Action>>(reducer, {result: 0})
+    // const [state, dispatch] = useReducer<Reducer<Data, Action>>(reducer, {result: 0})
+
+    const [res, dispatch] = useReducer<Reducer<Data, Action>, string>(reducer, 'zero', (param) => {
+        return {
+            result: param === 'zero' ? 0 : 1
+        }
+    });
+
 
     return (
 <div>
             <div onClick={() => dispatch({type: 'add', num: 1})}>add</div>
             <div onClick={() => dispatch({type: 'minus', num: 1})}>minus</div>
-            <div>{state.result}</div>
+            {/*<div>{state.result}</div>*/}
+            <div>{res.result}</div>
         </div>
     )
 

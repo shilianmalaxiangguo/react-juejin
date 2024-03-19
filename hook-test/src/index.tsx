@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 // import App from './App2';
-import App from './App3';
+// import App from './App3';
+// import App from './App4';
+// import App from './App6';
+import App from './App7';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
